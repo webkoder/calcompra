@@ -1,0 +1,16 @@
+nav{
+    display: flex;
+    background: #30302D
+}
+
+nav a{
+    flex: 1 0 auto;
+    padding:5px;
+    text-align: center;
+    text-decoration: none;
+    color: #F1EDEE
+}
+
+.selected{
+    background: #DB5461;
+}

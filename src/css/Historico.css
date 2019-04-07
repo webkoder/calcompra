@@ -1,0 +1,24 @@
+.hisItem{
+    margin:5px;
+    padding:5px;
+    border: 1px solid #DB5461;
+    border-radius: 2px;
+    color: #DB5461;
+  }
+  
+.hisItem .header{
+    font-size:10px;
+    font-weight: bold
+  }
+  
+.hisItem .data{
+    float:right
+  }
+  
+.hisItem .body{
+    display: flex;
+  }
+  
+.hisItem .hisProduto{
+    flex: 1
+  }
