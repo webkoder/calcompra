@@ -2,7 +2,7 @@
   "name": "calcompra",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://webkoder.github.io/calcompra",
+  "homepage": "https://webkoder.github.io/calcompra",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.3",
