@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1f7d731a6428611c1158",
+    "revision": "0e77693cc5b7ae81a4a5",
     "url": "/calcompra/static/css/main.1a4a18a8.chunk.css"
   },
   {
-    "revision": "1f7d731a6428611c1158",
-    "url": "/calcompra/static/js/main.1f7d731a.chunk.js"
+    "revision": "0e77693cc5b7ae81a4a5",
+    "url": "/calcompra/static/js/main.0e77693c.chunk.js"
   },
   {
     "revision": "0fb7b42e50edcc501e25",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/calcompra/static/js/2.717312b7.chunk.js"
   },
   {
-    "revision": "a13e59b372fe8f20c8a924a37687f197",
+    "revision": "a0f229f5e527b4ecc8a10c8da302de71",
     "url": "/calcompra/index.html"
   }
 ];
