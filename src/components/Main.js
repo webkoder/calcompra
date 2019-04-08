@@ -4,6 +4,7 @@ import ProdutoForm from './ProdutoForm';
 import Produto from './Produto';
 import ListaForm from './ListaForm';
 import Nav from './Nav';
+import '../css/Main.css';
 
 export default class Main extends Component {
 

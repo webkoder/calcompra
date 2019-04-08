@@ -50,7 +50,7 @@ export default class ProdutoForm extends Component {
         return (
             <div>
                 <div className="name-control">
-                    <span>Produto</span>
+                    <span>Nome do Produto</span>
                     <input type="text" name='nome' value={this.state.nome} placeholder="digite o nome do produto" onChange={ e => this.setProduto(e.target.value)} />
                 </div>
 
