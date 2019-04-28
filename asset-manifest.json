@@ -1,13 +1,13 @@
 {
   "main.css": "/calcompra/static/css/main.d7c7f212.chunk.css",
-  "main.js": "/calcompra/static/js/main.3ac4a0c1.chunk.js",
-  "main.js.map": "/calcompra/static/js/main.3ac4a0c1.chunk.js.map",
+  "main.js": "/calcompra/static/js/main.2700fa67.chunk.js",
+  "main.js.map": "/calcompra/static/js/main.2700fa67.chunk.js.map",
   "runtime~main.js": "/calcompra/static/js/runtime~main.0fb7b42e.js",
   "runtime~main.js.map": "/calcompra/static/js/runtime~main.0fb7b42e.js.map",
-  "static/js/2.63912311.chunk.js": "/calcompra/static/js/2.63912311.chunk.js",
-  "static/js/2.63912311.chunk.js.map": "/calcompra/static/js/2.63912311.chunk.js.map",
+  "static/js/2.b584792b.chunk.js": "/calcompra/static/js/2.b584792b.chunk.js",
+  "static/js/2.b584792b.chunk.js.map": "/calcompra/static/js/2.b584792b.chunk.js.map",
   "index.html": "/calcompra/index.html",
-  "precache-manifest.a5801a25204ecec504f0b81e6ec2a0c9.js": "/calcompra/precache-manifest.a5801a25204ecec504f0b81e6ec2a0c9.js",
+  "precache-manifest.1ee09828ab4f925a80e077875f8f4ace.js": "/calcompra/precache-manifest.1ee09828ab4f925a80e077875f8f4ace.js",
   "service-worker.js": "/calcompra/service-worker.js",
   "static/css/main.d7c7f212.chunk.css.map": "/calcompra/static/css/main.d7c7f212.chunk.css.map"
 }
