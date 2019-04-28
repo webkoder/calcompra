@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NumericInput from 'react-numeric-input';
 
 export default class ProdutoForm extends Component {
 
@@ -9,6 +10,8 @@ export default class ProdutoForm extends Component {
     }
 
     calculaResultado(e){
+
+        let valor = e.nativeEvent.data;
         
         let qnt = this.state.quantidade;
         if( e.target.name === "quantidade"){
@@ -36,6 +39,10 @@ export default class ProdutoForm extends Component {
         });
     }
 
+    checkValue(e){
+        console.log(e.target.value);
+    }
+
     setProduto(valor){
         this.setState({nome:valor});
     }
@@ -57,7 +64,8 @@ export default class ProdutoForm extends Component {
                 <div className="ProdutoForm">
                     <div className="form-control">
                         <span>Quantidade</span>
-                        <input type="number" name='quantidade' value={this.state.quantidade} onChange={ e => this.calculaResultado(e)}  />
+                        
+                        <NumericInput step={0.01} precision={2} />
                     </div>
                     <div className="form-control">
                         <span>Preço</span>
