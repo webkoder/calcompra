@@ -65,7 +65,7 @@ export default class ProdutoForm extends Component {
                     <div className="form-control">
                         <span>Quantidade</span>
                         
-                        <NumericInput step={0.01} precision={2} />
+                        <input type="number" name='quantidade' value={this.state.quantidade} onChange={ e => this.calculaResultado(e)} />
                     </div>
                     <div className="form-control">
                         <span>Preço</span>
