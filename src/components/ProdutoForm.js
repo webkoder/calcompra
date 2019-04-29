@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NumericInput from 'react-numeric-input';
 
 export default class ProdutoForm extends Component {
 
@@ -10,22 +9,11 @@ export default class ProdutoForm extends Component {
     }
 
     calculaResultado(e){
+        let qnt = parseFloat(this.state.quantidade);
+        if(isNaN(qnt)) return;
 
-        let valor = e.nativeEvent.data;
-        
-        let qnt = this.state.quantidade;
-        if( e.target.name === "quantidade"){
-            qnt = parseFloat(e.target.value);
-            if(isNaN(qnt)) return;
-            e.target.value = qnt;
-        }
-
-        let prc = this.state.preco;
-        if( e.target.name === "preco" ){
-            prc = parseFloat(e.target.value);
-            if(isNaN(prc)) return;
-            e.target.value = prc;
-        }
+        let prc = parseFloat(this.state.preco);
+        if(isNaN(prc)) return;
 
         let res = 0.0;        
         if(prc > 0.0){
@@ -37,6 +25,13 @@ export default class ProdutoForm extends Component {
             quantidade: qnt,
             preco: prc,
         });
+    }
+
+    setValor(e){
+        if( e.target.name === "quantidade" )
+            this.setState({quantidade : e.target.value});
+        else if ( e.target.name === "preco" )
+            this.setState({preco : e.target.value});
     }
 
     checkValue(e){
@@ -65,11 +60,22 @@ export default class ProdutoForm extends Component {
                     <div className="form-control">
                         <span>Quantidade</span>
                         
-                        <input type="number" name='quantidade' value={this.state.quantidade} onChange={ e => this.calculaResultado(e)} />
+                        <input type="number" name='quantidade'
+                            value={this.state.quantidade}
+                            onChange={ e => this.setValor(e)}
+                            onFocus={e => {if( e.target.value === "0" ) e.target.value = ""} }
+                            onBlur={ e => this.calculaResultado(e) }
+                            onKeyPress={ e => { if(e.key === "Enter") this.refs.numPreco.focus() }  }
+                            step="0.01" tabIndex='1' />
                     </div>
                     <div className="form-control">
                         <span>Preço</span>
-                        <input type="number" name='preco' value={this.state.preco} onChange={ e => this.calculaResultado(e)} />
+                        <input type="number" name='preco' ref="numPreco"
+                        value={this.state.preco}
+                        onChange={ e => this.setValor(e)}
+                        onFocus={e => {if( e.target.value === "0" ) e.target.value = ""} }
+                        onBlur={ e => this.calculaResultado(e) }
+                        step="0.01" tabIndex='2' />
                     </div>
                     <div className="form-control">
                         <span>Preço / Produto</span>
@@ -77,7 +83,9 @@ export default class ProdutoForm extends Component {
                     </div>
                 </div>
                 <div className="btn">
-                    <button type="button" onClick={() => this.Salvar()}>adicionar</button>
+                    <button type="button"
+                    onClick={() => this.Salvar()}
+                    tabIndex='3'>adicionar</button>
                 </div>
             </div>
         );

@@ -1,6 +1,19 @@
 .MainScreen{
     padding-top:20px
 }
+
+.ListaHeader{
+  display: flex
+}
+
+.ListaHeader h2{
+  flex:2 0 auto
+}
+
+.ListaHeader button{
+  flex:1 0 auto;
+  float: right 
+}
   
 .blur{
     filter: blur(2px);

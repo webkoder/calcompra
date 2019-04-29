@@ -82,11 +82,13 @@ export default class Main extends Component {
                 <Nav />
                 <div className="MainScreen">
                     <ProdutoForm onNovo={e => this.AdicionarNovo(e)} />
-                    <h2>
-                        valores calculados
+                    <div className="ListaHeader">
+                        <h2>
+                            valores calculados
+                        </h2>
                         <button className='optbtn green' onClick={() => this.SalvarAbrirDiag()}>salvar</button>
                         <button className='optbtn red' onClick={() => this.Limpar()}>limpar</button>
-                    </h2>
+                    </div>
                     <div className="lista">
                         {
                             itens.map((item, i) => {
