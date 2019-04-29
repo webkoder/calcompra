@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/calcompra/precache-manifest.1ee09828ab4f925a80e077875f8f4ace.js"
+  "/calcompra/precache-manifest.303962d56b118536552596f2efa153ad.js"
 );
 
 workbox.clientsClaim();
