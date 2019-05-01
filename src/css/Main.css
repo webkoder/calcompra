@@ -1,5 +1,6 @@
 .MainScreen{
-    padding-top:20px
+    padding-top:20px;
+    overflow:hidden
 }
 
 .ListaHeader{
@@ -19,37 +20,7 @@
     filter: blur(2px);
 }
 
-.ProdutoForm{
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.ProdutoForm div{
-    padding:5px;
-    margin: 5px;
-}
-
-.ProdutoForm .form-control{
-    background: #F1EDEE;
-    
-    flex: 2;
-    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.45);
-}
-
-.ProdutoForm span{
-    color: #DB5461;
-    display: block;
-    font-size:10px
-}
-.ProdutoForm input{
-    width:75%;
-    border-radius: 5px;
-    border: 1px solid #30302D;
-    color: #30302D;
-    font-weight: bold;
-    font-size:16px;
-    padding:5px;
-}
 
 .Produto{
     margin:5px;

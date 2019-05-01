@@ -1,17 +1,17 @@
 #ativo{
-  background: #DB5461
+  background: #8583BA
 }
 #desativado{
   background: #8AA29E
 }
 #dark{
-  background: #30302D
+  background: #4B4890
 }
 #light{
-  background: #F1EDEE
+  background: #FFF1DD
 }
 #primary{
-  background: #3D5467
+  background: #736ff4
 }
 
 .App-logo {
@@ -26,33 +26,14 @@ h2{
   color: #999999
 }
 
-.name-control{
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  margin:5px;
-  padding:5px;
-}
-
-.name-control span{
-  font-size:10px;
-  color: #30302D;
-}
-
-.name-control input{
-  font-size:16px;
-  color: #30302D;
-  border: none;
-  border-bottom: 1px solid #30302D;
-}
 
 .btn{
   display: flex;
 }
 
 .btn button{
-  background: #30302D;
-  border-radius: 10px;
+  background: #0F6559;
+  border-radius: 5px;
   padding:20px 25px;
   color: #FFFFFF;
   border:none;
@@ -61,12 +42,16 @@ h2{
 }
 
 .optbtn{
-  margin-right:10px;
-  border-radius: 10px;
+  margin-right:5px;
+  border-radius: 5px;
   padding:10px 20px;
   color: #FFFFFF;
   border:none;
   font-size:14px
+}
+
+.right{
+  float: right
 }
 
 .red{

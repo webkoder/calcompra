@@ -1,0 +1,75 @@
+.cadastroFechado{
+    margin-top:-175px;
+    animation-name: ani-cadastroFechado;
+    animation-duration: 500ms
+}
+
+.cadastroAberto{
+    margin-top:0px;
+    animation-name: ani-cadastroAberto;
+    animation-duration: 500ms
+  }
+
+@keyframes ani-cadastroFechado{
+    from{ margin-top: 0px }
+    to{ margin-top: -175px}
+}
+
+@keyframes ani-cadastroAberto{
+    from{ margin-top: -175px}
+    to{ margin-top: 0px }
+}
+
+  
+.name-control{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin:5px;
+    padding:5px;
+    margin-bottom:10px
+}
+
+.name-control span{
+    font-size:10px;
+    color: #30302D;
+    margin-bottom:5px
+  }
+  
+  .name-control input{
+    font-size:16px;
+    color: #30302D;
+    border: none;
+    border-bottom: 1px solid #30302D;
+  }
+
+  .ProdutoForm{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ProdutoForm div{
+    padding:5px;
+    margin: 5px;
+}
+
+.ProdutoForm .form-control{
+    background: #C9C8E2;
+    flex: 2;
+    border-radius: 5px
+}
+
+.ProdutoForm span{
+    color: #736ff4;
+    display: block;
+    font-size:10px;
+}
+.ProdutoForm input{
+    width:75%;
+    border-radius: 5px;
+    border: 1px solid #30302D;
+    color: #30302D;
+    font-weight: bold;
+    font-size:16px;
+    padding:5px;
+}

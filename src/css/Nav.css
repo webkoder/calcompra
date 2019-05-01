@@ -1,6 +1,6 @@
 nav{
     display: flex;
-    background: #30302D
+    background: #4B4890
 }
 
 nav a{
@@ -12,5 +12,5 @@ nav a{
 }
 
 .selected{
-    background: #DB5461;
+    background: #8583BA;
 }
