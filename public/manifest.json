@@ -1,5 +1,12 @@
 {
- "name": "App",
+ "name": "CalcCompra",
+ "short_name": "CalcCompra",
+ "start_url": "index.html",
+ "display": "standalone",
+ "orientation": "portrait",
+ "theme_color": "#736ff4",
+ "background_color": "#FFF1DD",
+ "version": "4",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
