@@ -1,5 +1,12 @@
 {
  "name": "App",
+ "short_name": "Calculadora",
+ "start_url": "index.html",
+ "display": "standalone",
+ "orientation": "portrait",
+ "theme_color": "#592e51",
+ "background_color": "#FFB400",
+ "version": "3",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
