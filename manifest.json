@@ -1,12 +1,12 @@
 {
- "name": "App",
- "short_name": "Calculadora",
+ "name": "CalcCompra",
+ "short_name": "CalcCompra",
  "start_url": "index.html",
  "display": "standalone",
  "orientation": "portrait",
- "theme_color": "#592e51",
- "background_color": "#FFB400",
- "version": "3",
+ "theme_color": "#736ff4",
+ "background_color": "#FFF1DD",
+ "version": "4",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
