@@ -6,7 +6,7 @@
  "orientation": "portrait",
  "theme_color": "#736ff4",
  "background_color": "#FFF1DD",
- "version": "4",
+ "version": "5",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
