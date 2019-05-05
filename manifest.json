@@ -1,7 +1,7 @@
 {
  "name": "CalcCompra",
  "short_name": "CalcCompra",
- "start_url": "index.html",
+ "start_url": ".",
  "display": "standalone",
  "orientation": "portrait",
  "theme_color": "#736ff4",
