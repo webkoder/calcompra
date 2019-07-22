@@ -8,10 +8,16 @@ import '../css/Main.css';
 
 export default class Main extends Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
+        let idx = this.props.location.homeProps
         this.srcHistorico = null;
-        this.state = {produtos : [], isSalvarForm:false, isHistorico:false};
+        if( idx ){
+            this.state = this.carregarHistorico(idx)
+        }else{
+            this.state = {produtos : [], isSalvarForm:false, isHistorico:false,
+                isSalvo: false};
+        }
     }
 
     AdicionarNovo(dados){
@@ -27,8 +33,15 @@ export default class Main extends Component {
         this.setState({produtos:_produtos});
     }
 
+    carregarHistorico(idx){
+        let his = JSON.parse(localStorage.getItem('historico'))[(idx-1)]
+        console.log(his)
+
+        return {produtos : his.produtos, isSalvarForm:false, isHistorico:false, isSalvo:true};
+    }
+
     Limpar(){
-        this.setState({produtos:[], isSalvarForm: false});
+        this.setState({produtos:[], isSalvarForm: false, isSalvo: false});
     }
 
     SalvarCancelarDiag(){
@@ -86,8 +99,11 @@ export default class Main extends Component {
                         <h2>
                             valores calculados
                         </h2>
-                        <button className='optbtn green' onClick={() => this.SalvarAbrirDiag()}>salvar</button>
-                        <button className='optbtn red' onClick={() => this.Limpar()}>limpar</button>
+                        <button className='optbtn green' disabled={this.state.isSalvo}
+                            onClick={() => this.SalvarAbrirDiag()}>salvar</button>
+
+                        <button className='optbtn red'
+                            onClick={() => this.Limpar()}>limpar</button>
                     </div>
                     <div className="lista">
                         {

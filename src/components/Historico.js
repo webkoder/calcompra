@@ -1,26 +1,32 @@
-import React, { Component } from 'react';
-import Nav from './Nav';
-import '../css/Historico.css';
+import React, { Component } from 'react'
+import Nav from './Nav'
+import { Link } from 'react-router-dom';
+
+import '../css/Historico.css'
 
 export default class Historico extends Component {
 
     constructor(){
-        super();
-        let his = localStorage.getItem('historico');
+        super()
+        let his = localStorage.getItem('historico')
         if( his )
-            his = JSON.parse(his);
+            his = JSON.parse(his)
         else
-            his = [];
-        this.state = {lista:his};
+            his = []
+        this.state = {lista:his}
     }
 
     formatData(data){
-        let _data = data.split('-');
-        return `${_data[2]}.${_data[1]}.${_data[0]}`;
+        let _data = data.split('-')
+        return `${_data[2]}.${_data[1]}.${_data[0]}`
+    }
+
+    abrir(idx){
+        console.log( idx )
     }
 
     render(){
-        const lista = this.state.lista;
+        const lista = this.state.lista
         return (
             <section className='historico'>
                 <Nav />
@@ -41,11 +47,12 @@ export default class Historico extends Component {
                                         <div className="header">{p.nome}</div>
                                         <div className="body">{p.resultado}</div>
                                     </div>
-                                    );
+                                    )
                                 })
                             }
                         </div>
-                     </div>);
+                        <Link to={ {pathname:'/', homeProps : item.indice} } replace>Abrir</Link>
+                     </div>)
                     })
                 }
             </section>
