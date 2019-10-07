@@ -5,7 +5,7 @@ export default class ProdutoForm extends Component {
 
     constructor(props){
         super(props);
-        this.state = {quantidade: 0.0, preco: 0.0, resultado: 0.0, nome: '', status: 'cadastroFechado'};
+        this.state = {quantidade: 0.0, preco: 0.0, resultado: 0.0, nome: '', status: 'cadastroInicial'};
         this.props = props;
     }
 
@@ -44,7 +44,7 @@ export default class ProdutoForm extends Component {
     }
 
     Salvar(){
-        if( this.state.status === 'cadastroFechado' ){
+        if( this.state.status === 'cadastroFechado' || this.state.status === 'cadastroInicial' ){
             this.setState({status: 'cadastroAberto'});
             this.refs.txtNome.focus();
             return;

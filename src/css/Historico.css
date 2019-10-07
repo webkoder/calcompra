@@ -36,7 +36,7 @@
     flex: 1
 }
 
-.historico a{
+.historico .hisBtn{
   width:100%;
   background: rgb(0, 47, 10);
   color:#FFFFFF;
@@ -46,6 +46,6 @@
   text-align:center;
   text-decoration: none
 }
-.historico a:hover{
+.historico .hisBtn:hover{
   background: rgb(0, 95, 21);
 }

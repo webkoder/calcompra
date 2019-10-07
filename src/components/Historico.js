@@ -51,7 +51,7 @@ export default class Historico extends Component {
                                 })
                             }
                         </div>
-                        <Link to={ {pathname:'/', homeProps : item.indice} } replace>Abrir</Link>
+                        <Link className='hisBtn' to={ {pathname:'/', homeProps : item.indice} } replace>Abrir</Link>
                      </div>)
                     })
                 }

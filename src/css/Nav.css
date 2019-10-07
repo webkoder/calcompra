@@ -3,7 +3,7 @@ nav{
     background: #4B4890
 }
 
-nav a{
+nav .navbtn{
     flex: 1 0 auto;
     padding:15px 0px;
     text-align: center;

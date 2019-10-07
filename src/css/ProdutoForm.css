@@ -4,6 +4,10 @@
     animation-duration: 500ms
 }
 
+.cadastroInicial{
+    margin-top:-175px !important;
+}
+
 .cadastroAberto{
     margin-top:0px;
     animation-name: ani-cadastroAberto;
