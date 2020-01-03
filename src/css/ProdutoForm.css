@@ -1,26 +1,29 @@
 .cadastroFechado{
-    margin-top:-175px;
+    margin-top:-234px;
+    background:#120e6a;
     animation-name: ani-cadastroFechado;
     animation-duration: 500ms
 }
 
 .cadastroInicial{
-    margin-top:-175px !important;
+    margin-top:-185px !important;
 }
 
 .cadastroAberto{
+    padding-top:20px;
     margin-top:0px;
+    background:#120e6a;
     animation-name: ani-cadastroAberto;
     animation-duration: 500ms
   }
 
 @keyframes ani-cadastroFechado{
     from{ margin-top: 0px }
-    to{ margin-top: -175px}
+    to{ margin-top: -234px}
 }
 
 @keyframes ani-cadastroAberto{
-    from{ margin-top: -175px}
+    from{ margin-top: -234px}
     to{ margin-top: 0px }
 }
 
@@ -29,51 +32,90 @@
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin:5px;
-    padding:5px;
-    margin-bottom:10px
+    margin:5px 5%;
+    margin-bottom:10px;
 }
+
 
 .name-control span{
     font-size:10px;
-    color: #30302D;
+    color: #cccccc;
     margin-bottom:5px
-  }
-  
-  .name-control input{
-    font-size:16px;
+}
+
+.name-control input{
+    font-size:18px;
+    background: none;
     color: #30302D;
     border: none;
-    border-bottom: 1px solid #30302D;
+    padding:5px;
+    border-bottom: 1px solid #FFFFFF;
+    transition: 0.3s;
   }
 
-  .ProdutoForm{
+  .name-control input:focus{
+      font-size:28px;
+      transition: 0.3s;
+  }
+
+.ProdutoForm{
     display: flex;
     flex-wrap: wrap;
+
 }
 
-.ProdutoForm div{
-    padding:5px;
-    margin: 5px;
+.form-control{
+    padding:0px;
+    width:40%;
+    display:flex;
+    height:72px;
+    margin:0 5%
 }
 
-.ProdutoForm .form-control{
-    background: #C9C8E2;
-    flex: 2;
-    border-radius: 5px
+.form-control .icon{
+    background: #4b4892;
+    height:72px;
+    flex:0 0 72px;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    border-radius:2px;
 }
 
-.ProdutoForm span{
+.form-control .icon svg{
+    align-self: center
+}
+
+.form-control .content{
+    height:72px;
+    flex:auto;
+}
+
+.form-control span{
     color: #736ff4;
     display: block;
     font-size:10px;
+    width:95%;
+    margin-left:5%
 }
-.ProdutoForm input{
-    width:75%;
-    border-radius: 5px;
-    border: 1px solid #30302D;
-    color: #30302D;
+
+.form-control .content div{
+    width:95%;
+    margin-left:5%
+}
+
+.form-control .content div input{
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    color: #dddddd;
     font-weight: bold;
-    font-size:16px;
-    padding:5px;
+    font-size:28px;
+    padding:8px;
+    width: 90%;
+    background: #4b4892
+}
+
+.form-control:last-child{
+    margin-top:15px;
+    flex:2
 }

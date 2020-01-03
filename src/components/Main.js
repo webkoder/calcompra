@@ -5,12 +5,16 @@ import Produto from './Produto';
 import ListaForm from './ListaForm';
 import Nav from './Nav';
 import '../css/Main.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSave, faTrash }
+    from '@fortawesome/free-solid-svg-icons';
 
 export default class Main extends Component {
 
     constructor(props){
         super(props);
-        let idx = this.props.location.homeProps
+        // let idx = this.props.location.homeProps
+        let idx = 1;    
         this.srcHistorico = null;
         if( idx ){
             this.state = this.carregarHistorico(idx)
@@ -100,10 +104,14 @@ export default class Main extends Component {
                             valores calculados
                         </h2>
                         <button className='optbtn green' disabled={this.state.isSalvo}
-                            onClick={() => this.SalvarAbrirDiag()}>salvar</button>
+                            onClick={() => this.SalvarAbrirDiag()}>
+                                <FontAwesomeIcon icon={faSave} inverse /> salvar
+                            </button>
 
                         <button className='optbtn red'
-                            onClick={() => this.Limpar()}>limpar</button>
+                            onClick={() => this.Limpar()}>
+                                <FontAwesomeIcon icon={faTrash} inverse /> limpar
+                            </button>
                     </div>
                     <div className="lista">
                         {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/Produto.css';
 
 export default class Produto extends Component {
 
@@ -22,12 +23,17 @@ export default class Produto extends Component {
     render(){
         return (
             <section className="Produto">
-                <div className="header">
-                    {this.indice}. {this.nome}
+                <div className="icon">
+                    <span>{this.indice}</span>
                 </div>
-                <div className="body">
-                    <span className="info">{this.quantidade} / R$ {this.preco}</span>
-                    <span className="result">{this.resultado}</span>
+                <div className="content">
+                    <div className="header">
+                        {this.nome}
+                    </div>
+                    <div className="body">
+                        <span className="info">{this.quantidade} / R$ {this.preco}</span>
+                        <span className="result">{this.resultado}</span>
+                    </div>
                 </div>
             </section>
         );

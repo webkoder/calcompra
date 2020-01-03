@@ -29,6 +29,15 @@ h2{
 
 .btn{
   display: flex;
+  margin-top:10px
+}
+
+.btn button:first-child{
+  flex:10 0 auto;
+}
+
+.btn button:last-child{
+  flex:1 0 auto
 }
 
 .btn button{
@@ -37,7 +46,6 @@ h2{
   padding:20px 25px;
   color: #FFFFFF;
   border:none;
-  flex: 1;
   margin:5px
 }
 
@@ -60,6 +68,20 @@ h2{
 
 .green{
   background: #059960;
+}
+
+.blue{
+  background: #230599;
+}
+
+.border-blue{
+  border: 1px solid #230599!important;
+  background:none!important 
+}
+
+.border-white{
+  border: 1px solid #ffffff!important;
+  background:none!important 
 }
 
 .mb2{
