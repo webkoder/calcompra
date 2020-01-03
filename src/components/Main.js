@@ -13,8 +13,7 @@ export default class Main extends Component {
 
     constructor(props){
         super(props);
-        // let idx = this.props.location.homeProps
-        let idx = 1;    
+        let idx = this.props.location.homeProps
         this.srcHistorico = null;
         if( idx ){
             this.state = this.carregarHistorico(idx)
