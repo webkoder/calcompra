@@ -18,9 +18,12 @@ export default class Produto extends Component {
         this.resultado = this.props.resultado;
         this.nome = this.props.nome;
         this.indice = this.props.indice;
+        if( this.nome === 0) this.nome = "Produto";
+        else if( this.nome === "") this.nome = "Produto";
     }
 
     render(){
+        console.log( this.nome )
         return (
             <section className="Produto">
                 <div className="icon">
@@ -28,7 +31,7 @@ export default class Produto extends Component {
                 </div>
                 <div className="content">
                     <div className="header">
-                        {this.nome}
+                        {this.nome }
                     </div>
                     <div className="body">
                         <span className="info">{this.quantidade} / R$ {this.preco}</span>

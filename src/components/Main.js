@@ -104,12 +104,12 @@ export default class Main extends Component {
                         </h2>
                         <button className='optbtn green' disabled={this.state.isSalvo}
                             onClick={() => this.SalvarAbrirDiag()}>
-                                <FontAwesomeIcon icon={faSave} inverse /> salvar
+                                <FontAwesomeIcon icon={faSave} inverse={true} /> salvar
                             </button>
 
                         <button className='optbtn red'
                             onClick={() => this.Limpar()}>
-                                <FontAwesomeIcon icon={faTrash} inverse /> limpar
+                                <FontAwesomeIcon icon={faTrash} inverse={true} /> limpar
                             </button>
                     </div>
                     <div className="lista">

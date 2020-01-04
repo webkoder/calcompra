@@ -24,11 +24,19 @@ export default class ProdutoForm extends Component {
             res = Math.round(((prc / qnt) * 1000)) / 1000;
         }
 
+        if( res === 0.0) return;
+
         this.setState({
             resultado: res,
             quantidade: qnt,
             preco: prc,
         });
+    }
+
+    focusClean(e){
+        if( e.target.value === "0" ){
+            e.target.value = "";
+        }
     }
 
     setValor(e){
@@ -79,7 +87,7 @@ export default class ProdutoForm extends Component {
                 <div className="ProdutoForm">
                     <div className="form-control">
                         <div className="icon">
-                            <FontAwesomeIcon icon={faBox} size="2x" inverse />
+                            <FontAwesomeIcon icon={faBox} size="2x" inverse={true} />
                         </div>
                         <div className="content">
                             <span>Quantidade</span>
@@ -88,7 +96,7 @@ export default class ProdutoForm extends Component {
                                     ref="numQuantidade"
                                     value={this.state.quantidade}
                                     onChange={ e => this.setValor(e)}
-                                    onFocus={e => {if( e.target.value === "0" ) e.target.value = ""} }
+                                    onFocus={e => this.focusClean(e) }
                                     onBlur={ e => this.calculaResultado(e) }
                                     onKeyPress={ e => { if(e.key === "Enter") this.refs.numPreco.focus() }  }
                                     step="0.01" tabIndex='2' />
@@ -97,7 +105,7 @@ export default class ProdutoForm extends Component {
                     </div>
                     <div className="form-control">
                         <div className="icon">
-                            <FontAwesomeIcon icon={faDollarSign} size="2x" inverse />
+                            <FontAwesomeIcon icon={faDollarSign} size="2x" inverse={true} />
                         </div>
                         <div className="content">
                             <span>Preço</span>
@@ -105,15 +113,16 @@ export default class ProdutoForm extends Component {
                                 <input type="number" name='preco' ref="numPreco"
                                 value={this.state.preco}
                                 onChange={ e => this.setValor(e)}
-                                onFocus={e => {if( e.target.value === "0" ) e.target.value = ""} }
+                                onFocus={e => this.focusClean(e)}
                                 onBlur={ e => this.calculaResultado(e) }
+                                onKeyPress={ e => { if(e.key === "Enter") this.refs.btnAdicionar.focus() }  }
                                 step="0.01" tabIndex='3' />
                             </div>
                         </div>
                     </div>
                     <div className="form-control">
                         <div className="icon">
-                            <FontAwesomeIcon icon={faEquals} size="2x" inverse />
+                            <FontAwesomeIcon icon={faEquals} size="2x" inverse={true} />
                         </div>
                         <div className="content">
                             <span>Preço / Produto</span>
@@ -125,6 +134,7 @@ export default class ProdutoForm extends Component {
                 </div>
                 <div className="btn">
                     <button type="button" className=" border-white"
+                    ref="btnAdicionar"
                     onClick={() => this.Salvar()}
                     tabIndex='4'>adicionar</button>
 
